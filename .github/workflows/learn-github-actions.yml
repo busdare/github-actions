@@ -18,8 +18,8 @@ jobs:
         # Steps up node
       - uses: actions/setup-node@v2
         # Installs bat
-      - run: npm install -g bats
+      - run: npm install testcafe
         # Checks the version of bats installed
-      - run: bats -v
+      - run: testcafe -version
         # Checks the version of node installed
       - run: node -v
