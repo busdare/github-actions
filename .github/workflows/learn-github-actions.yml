@@ -16,8 +16,10 @@ jobs:
        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         # Steps up node
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         # Installs bat
       - run: npm install -g bats
         # Checks the version of bats installed
       - run: bats -v
+        # Checks the version of node installed
+      - run: node -v
